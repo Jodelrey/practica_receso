@@ -20,6 +20,7 @@ body {
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
+    text-align: center;
 }
 
 .sldr-title {
@@ -36,7 +37,7 @@ body {
     display: flex;
     justify-content: center;
     overflow: hidden;
-    width: 110%;
+    width: 105%;
 }
 
 .sldr-card-container {
@@ -47,7 +48,7 @@ body {
     background-color:rgb(238, 239, 255);
     margin: 0 10px;
     padding: 25px;
-    min-width: calc(80% / 3 + 20px);
+    min-width: calc(100% / 3 - 60px);
 }
 .sldr-img {
     border-radius: 50%;
@@ -95,7 +96,7 @@ body {
     border: 3px solid rgb(199, 117, 117);
 }
 
-.sldr-link:active ^ .sldr-card-container {
+.sldr-link:active  .sldr-card-container {
     position: absolute;
 
 }

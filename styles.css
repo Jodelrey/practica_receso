@@ -78,29 +78,22 @@ body {
 
 }
 
-.sldr-btn-bullet {
+.sldr-link {
     display: block;
     background-color: rgb(199, 117, 117);
-    width: 10px;
-    height: 10px;
+    width: 5px;
+    height: 5px;
     border-radius: 50%;
-    transition-duration: 1s;
+    transition-duration: .3s;
+    border: 3px solid transparent;
+    margin: 10px;
 }
 
-.sldr-btn-bullet:hover {
+.sldr-link:hover {
     background-color: gray;
 }
 
-.sldr-btn-bullet:active {
+.sldr-link:active {
     background-color: transparent;
     border: 3px solid rgb(199, 117, 117);
-}
-
-.sldr-link:active  .sldr-card-container {
-    position: absolute;
-
-}
-
-.sldr-link {
-    margin: 10px;
 }

@@ -1,8 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 body {
     font-family: Poppins, sans-serif;
     display: flex;
@@ -17,6 +12,7 @@ body {
 
 .slider {
     width: 80%;
+    margin: 0 auto;
     margin-top: 50px;
     text-align: center;
     position: relative;
@@ -24,12 +20,15 @@ body {
 
 .sldr-title {
     font-size: xx-large;
+    margin: 0;
+    padding: 0;
 }
 
 .sldr-subtitle {
     font-size: 15px;
     color: #666;
-    margin-bottom: 50px;
+    margin: 0 0 50px 0;
+    padding: 0;
 }
 
 .sldr-container {
@@ -39,7 +38,7 @@ body {
 
 .sldr-group-cards {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     transition: transform linear .7s;
 }
 
@@ -52,10 +51,11 @@ body {
     align-items: center;
     border-radius: 5px;
     background-color: #f3f7fb;
-    margin:10px;
+    margin: 10px;
     padding: 35px 0;
-    max-width: calc(100% / 3 - 25px);
-    min-width: calc(100% / 3 - 25px);
+    height: 100%;
+    max-width: calc(100% / 3 - 19px);
+    min-width: calc(100% / 3 - 19px);
     transition: ease;
     transition-duration: 1s;
 }
@@ -75,28 +75,33 @@ body {
     font-size: 15px;
     padding: 25px;
     color: #888;
+    margin: 0;
 }
 
 .sldr-name {
     font-weight: 700;
+    margin: 0;
+    padding: 0;
 }
 
 .sldr-profession {
     color: #888;
+    margin: 0;
+    padding: 0;
 }
 
 /*  BULLETS */
 
 .sldr-button {
-    background-color:  rgb(194, 84, 84);
+    cursor: pointer;
+    background-color: rgb(194, 84, 84);
     width: 15px;
     height: 15px;
-    vertical-align: middle;
-    border-radius: 50%;
-    transition: ease-in-out;
-    transition-duration: .4s;
     border: 3px solid white;
     margin: 20px 5px;
+    vertical-align: middle;
+    transition: ease-in-out;
+    transition-duration: .4s;
     position: absolute;
     top: 100%;
 }
@@ -105,10 +110,9 @@ body {
     background-color: gray;
 }
 
-.sldr-button:active {
+.sldr-button:checked {
     background-color: transparent;
     border: 3px solid rgb(194, 84, 84);
-    
 }
 
 .sldr-1 {
@@ -131,17 +135,18 @@ body {
     display: none;
 }
 
-.sldr-2:active ~ .sldr-container .sldr-group-cards {
+.sldr-2:checked ~ .sldr-container .sldr-group-cards {
+    transform: translateX(0%);
+}
+
+.sldr-3:checked ~ .sldr-container .sldr-group-cards {
     transform: translateX(-100%);
 }
 
-.sldr-3:active ~ .sldr-container .sldr-group-cards {
-    transform: translateX(100%);
+.sldr-4:checked ~ .sldr-container .sldr-group-cards {
+    transform: translateX(-200%);
 }
 
-.sldr-4:active ~ .sldr-container .sldr-group-cards {
-    transform: translateX(-100%);
-}
 
 /*======================
         RESPONSIVE
@@ -167,23 +172,24 @@ body {
         max-width: calc(100% / 2 - 20px);
         min-width: calc(100% / 2 - 20px);
     }
-    .sldr-1:active ~ .sldr-container .sldr-group-cards {
-        transform: translateX(-50%);
+    .sldr-1:checked ~ .sldr-container .sldr-group-cards {
+        transform: translateX(0%);
     }
     
-    .sldr-2:active ~ .sldr-container .sldr-group-cards {
+    .sldr-2:checked ~ .sldr-container .sldr-group-cards {
         transform: translateX(-100%);
     }
     
-    .sldr-3:active ~ .sldr-container .sldr-group-cards {
-        transform: translateX(-150%);
-    }
-    
-    .sldr-4:active ~ .sldr-container .sldr-group-cards {
+    .sldr-3:checked ~ .sldr-container .sldr-group-cards {
         transform: translateX(-200%);
     }
     
-    .sldr-5:active ~ .sldr-container .sldr-group-cards {
-        transform: translateX(-250%);
+    .sldr-4:checked ~ .sldr-container .sldr-group-cards {
+        transform: translateX(-300%);
+    }
+    
+    .sldr-5:checked ~ .sldr-container .sldr-group-cards {
+        transform: translateX(-350%);
     }
 }
+

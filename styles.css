@@ -10,17 +10,16 @@ body {
     align-items: center;
 }
 
+
 /*=========================
-            SLIDER
+SLIDER
 =========================*/
 
 .slider {
     width: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin-top: 50px;
     text-align: center;
+    position: relative;
 }
 
 .sldr-title {
@@ -34,22 +33,38 @@ body {
 }
 
 .sldr-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.sldr-group-cards {
     display: flex;
     justify-content: center;
-    overflow: hidden;
-    width: 105%;
+    transition: transform 1s;
 }
+
+
+/* card container */
 
 .sldr-card-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     border-radius: 5px;
-    background-color:rgb(238, 239, 255);
-    margin: 0 10px;
-    padding: 25px;
-    min-width: calc(100% / 3 - 60px);
+    background-color: #f3f7fb;
+    margin:10px;
+    padding: 25px 0;
+    max-width: calc(100% / 3 - 25px);
+    min-width: calc(100% / 3 - 25px);
+    transition: ease;
+    transition-duration: 1s;
 }
+
+.sldr-card-container:hover {
+    background-color: #cfcfcf;
+    transform: scale(1.02);
+}
+
 .sldr-img {
     border-radius: 50%;
     padding: 0;
@@ -58,7 +73,7 @@ body {
 .sldr-description {
     text-align: center;
     font-size: 15px;
-    padding: 25px 0;
+    padding: 25px;
     color: #888;
 }
 
@@ -70,30 +85,52 @@ body {
     color: #888;
 }
 
-.sldr-btns-container {
-    display: flex;
-    margin-top: 20px;
-    justify-content: center;
-    align-items: center;
+/*  BULLETS */
 
-}
-
-.sldr-link {
-    display: block;
+.sldr-button {
     background-color: rgb(199, 117, 117);
-    width: 5px;
-    height: 5px;
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
     border-radius: 50%;
-    transition-duration: .3s;
-    border: 3px solid transparent;
-    margin: 10px;
+    transition: ease-in-out;
+    transition-duration: .4s;
+    border: 3px solid white;
+    margin: 20px 5px;
+    position: absolute;
+    top: 100%;
 }
 
-.sldr-link:hover {
+.sldr-button:hover {
     background-color: gray;
 }
 
-.sldr-link:active {
+.sldr-button:active {
     background-color: transparent;
     border: 3px solid rgb(199, 117, 117);
+    
+}
+
+.sldr-1 {
+    left: 48%;
+}
+
+.sldr-2 {
+    left: 50%;
+}
+
+.sldr-3 {
+    left: 52%;
+}
+
+.sldr-1:active ~ .sldr-container .sldr-group-cards {
+    transform: translateX(-100%);
+}
+
+.sldr-2:active ~ .sldr-container .sldr-group-cards {
+    transform: translateX(100%);
+}
+
+.sldr-3:active ~ .sldr-container .sldr-group-cards {
+    transform: translateX(-100%);
 }

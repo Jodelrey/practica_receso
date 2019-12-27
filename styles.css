@@ -5,4 +5,149 @@
 
 body {
     font-family: Poppins, sans-serif;
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.middle-section {
+    width: 80%;
+      
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    
+}
+
+.description h2 {
+    font-size: 30px;
+}
+.description h4{
+    font-weight: 500;
+    color: gray;
+}
+.container-options{
+    margin-top: 50px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;    
+    align-content: flex-start;
+    margin-bottom: 30px;
+}
+
+.option h3 {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.option p{
+    margin-top: 10px;
+    font-size: 15px;
+    color: grey;
+}
+
+.option .readmore{
+    margin-top: 10px;
+    font-size: 15px;
+    color: grey;
+    text-decoration: none;
+}
+
+.option {
+    width: 30%;
+    
+}
+
+.digital-mkt {
+    display: flex;
+    justify-content: space-between;    
+    width: 100%;
+    margin-top: 90px;   
+
+}
+
+.text{
+    margin-top: 100px;
+    max-width: 40%;
+    
+}
+
+.text h3 {
+    font-size: 30px;
+}
+
+.text p {
+    color: grey;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.text p:nth-child(3){
+    font-weight: 600;
+}
+
+.digital-agency {
+    display: flex;
+    justify-content: space-around;
+}
+
+.DA-text{
+    width: 35%;
+    margin-top: 80px;
+}
+
+.DA-text h3{
+    font-size: 30px;
+}
+
+.DA-text p{
+    margin-top: 10px;
+    color: grey;
+}
+
+.DA-text p:nth-child(3){
+    font-weight: 600;
+}
+
+button {
+    margin-top: 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: #698474;
+    width: 32%;
+    line-height: 35px;
+    box-shadow: none;
+    font-size: 15px;
+    outline: none;
+    transition: 0.5s 0.2s;
+}
+
+.option img{
+    transition: 0.5s 0.2s;
+}
+
+.readmore {
+    font-weight: 600;
+    transition: 0.2s 0.2s;
+}
+
+.option img:hover {
+    transform: scale(1.2);
+}
+
+.readmore:hover {
+    color: #fa697c;
+}
+
+button:hover {
+    background-color:white;
+    border: 1.5px solid #698474;
+    color: #698474;
+    font-weight: 700;
 }

@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css"
         integrity="sha256-46qynGAkLSFpVbEBog43gvNhfrOj+BmwXdxFgVK/Kvc=" crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
@@ -25,7 +27,7 @@
         <div class="cards-case-studies-container">
             <div class="card-case-studies case-card-one">
                 <div class="add-card-subtitle">
-                    <div class="img-card-case img-case-one">
+                    <div class="img-card-case img-case-one" data-aos="zoom-in" data-aos-duration="1000">
                         <img src="http://www.bootstrapdash.com/demo/simple/images/Group95.svg" alt="">
                     </div>
                     <div class="hover-card-case">
@@ -39,7 +41,7 @@
                 </div>
             </div>
 
-            <div class="card-case-studies case-card-two">
+            <div class="card-case-studies case-card-two" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
                 <div class="add-card-subtitle">
                     <div class="img-card-case img-case-two">
                         <img src="http://www.bootstrapdash.com/demo/simple/images/Group108.svg" alt="">
@@ -55,7 +57,7 @@
                 </div>
             </div>
 
-            <div class="card-case-studies case-card-three">
+            <div class="card-case-studies case-card-three" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="300">
                 <div class="add-card-subtitle">
                     <div class="img-card-case img-case-three">
                         <img src="http://www.bootstrapdash.com/demo/simple/images/Group126.svg" alt="">
@@ -72,7 +74,7 @@
                 </div>
             </div>
 
-            <div class="card-case-studies case-card-four">
+            <div class="card-case-studies case-card-four" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
                 <div class="add-card-subtitle">
                     <div class="img-card-case img-case-four">
                         <img src="http://www.bootstrapdash.com/demo/simple/images/Group115.svg" alt="">
@@ -89,7 +91,12 @@
             </div>
         </div>
     </section>
+    <script src="jquery-3.4.1.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+    <script>
+        AOS.init();
+      </script>
 </body>
 
 </html>

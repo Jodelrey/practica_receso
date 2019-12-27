@@ -7,6 +7,7 @@ body {
     font-family: Poppins, sans-serif;
     display: flex;
     justify-content: center;
+    transition-timing-function: cubic-bezier(.175,.885,.32,1.275);|
 }
 
 .case-studies-container {
@@ -37,6 +38,7 @@ body {
     width: 25%;
     min-width: 250px;
 }
+
 .card-case-studies h3,p {
     text-align: center;
 }

@@ -74,7 +74,7 @@ body {
 
 .text{
     margin-top: 100px;
-    max-width: 40%;
+    width: 40%;
     
 }
 
@@ -150,4 +150,27 @@ button:hover {
     border: 1.5px solid #698474;
     color: #698474;
     font-weight: 700;
+}
+
+@media (max-width: 860px){
+    .container-options{
+        display: flex;
+        flex-direction: column;
+        
+        
+    }
+    .container-options .option{
+        margin-top:20px;
+    }
+    
+    .digital-mkt, .digital-agency{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+     
+    .digital-mkt div, .digital-agency div{
+        width: 80%;
+        margin-top: 35px;
+    }
 }

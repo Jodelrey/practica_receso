@@ -1,9 +1,13 @@
-
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0px;
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
- 
+
+
 header {
     width: 100%;
     display: block;
@@ -38,10 +42,6 @@ nav {
     padding-top: 10px;    
 }
 
-.items li.current {
-    color: red;
-    font-weight: bold;
-  }
 
 .items li:hover {
     color: red;
@@ -55,14 +55,188 @@ nav {
 
 .myButton {
     background-color: rgb(14, 91, 235);
-    border-radius:6px;
-    cursor:pointer;
+    border-radius: 6px;
+    cursor: pointer;
     color:#ffffff;
     font-size: 14px;
-    padding:8px 24px;
+    padding: 8px 24px;
     text-decoration:none; 
     line-height: 18px;
     margin-right: 25px;
-    margin-top: 10px;   
+    margin-top: 10px;
 }
 
+
+
+.middle-section {
+    width: 80%;
+      
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+    
+}
+
+.description h2 {
+    font-size: 30px;
+}
+
+.description h4{
+    font-weight: 500;
+    color: gray;
+    margin: 0;
+}
+.container-options{
+    margin-top: 60px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;    
+    align-content: flex-start;
+    margin-bottom: 30px;
+}
+
+.option h3 {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.option p{
+    margin-top: 10px;
+    font-size: 15px;
+    color: grey;
+}
+
+.option .readmore{
+    margin-top: 10px;
+    font-size: 15px;
+    color: grey;
+    text-decoration: none;
+}
+
+.option {
+    width: 30%;
+    
+}
+
+.digital-mkt {
+    display: flex;
+    justify-content: space-between;    
+    width: 100%;
+    margin-top: 100px;   
+
+}
+
+.text{
+    margin-top: 100px;
+    width: 40%;
+    
+}
+
+.text h3 {
+    font-size: 30px;
+}
+
+.text p {
+    color: grey;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.text p:nth-child(3){
+    font-weight: 600;
+}
+
+.digital-agency {
+    display: flex;
+    justify-content: space-around;
+}
+
+.DA-text{
+    width: 35%;
+    margin-top: 80px;
+}
+
+.DA-text h3{
+    font-size: 30px;
+}
+
+.DA-text p{
+    margin-top: 10px;
+    color: grey;
+}
+
+.DA-text p:nth-child(3){
+    font-weight: 600;
+}
+
+.DA-text button {
+    margin-top: 10px;
+    border-radius: 5px;
+    color: white;
+    background-color: #698474;
+    width: 32%;
+    line-height: 35px;
+    box-shadow: none;
+    font-size: 15px;
+    outline: none;
+    transition: 0.5s 0.2s;
+}
+
+.option img{
+    transition: 0.5s 0.2s;
+}
+
+.readmore {
+    font-weight: 600;
+    transition: 0.2s 0.2s;
+}
+
+.option img:hover {
+    transform: scale(1.2);
+}
+
+.readmore:hover {
+    color: #fa697c;
+}
+
+.DA-text button:hover {
+    background-color:white;
+    border: 1.5px solid #698474;
+    color: #698474;
+    font-weight: 700;
+}
+
+@media (max-width: 860px){
+    .container-options{
+        display: flex;
+        flex-direction: column;
+        
+        
+    }
+    .container-options .option{
+        margin-top:20px;
+    }
+
+    .digital-mkt, .digital-agency{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+     
+    .digital-mkt div, .digital-agency div{
+        width: 80%;
+        margin-top: 35px;
+    }
+    .DA-text, .digital-mkt .text, .description{
+        text-align: center;
+    }
+
+    .DA-text{        
+        order:-1;
+    }
+}

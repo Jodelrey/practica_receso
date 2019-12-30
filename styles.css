@@ -21,7 +21,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 25px;
+    margin-top: 35px;
     
 }
 
@@ -33,7 +33,7 @@ body {
     color: gray;
 }
 .container-options{
-    margin-top: 50px;
+    margin-top: 60px;
     display: flex;
     justify-content:space-between;
     align-items: center;    
@@ -68,7 +68,7 @@ body {
     display: flex;
     justify-content: space-between;    
     width: 100%;
-    margin-top: 90px;   
+    margin-top: 100px;   
 
 }
 
@@ -162,7 +162,7 @@ button:hover {
     .container-options .option{
         margin-top:20px;
     }
-    
+
     .digital-mkt, .digital-agency{
         display: flex;
         flex-direction: column;
@@ -172,5 +172,12 @@ button:hover {
     .digital-mkt div, .digital-agency div{
         width: 80%;
         margin-top: 35px;
+    }
+    .DA-text, .digital-mkt .text, .description{
+        text-align: center;
+    }
+
+    .DA-text{        
+        order:-1;
     }
 }

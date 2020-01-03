@@ -442,8 +442,7 @@ MEDIA QUERY
 
 .slider {
     width: 80%;
-    margin: 0 auto;
-    margin-top: 50px;
+    margin: 150px 0;
     text-align: center;
     position: relative;
 }
@@ -533,7 +532,7 @@ MEDIA QUERY
     transition: ease-in-out;
     transition-duration: .4s;
     position: absolute;
-    bottom: 830px;
+    top: 500px;
 }
 
 .sldr-button:hover {

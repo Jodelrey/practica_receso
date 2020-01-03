@@ -1,3 +1,8 @@
+html{
+    scroll-behavior: smooth;
+}
+
+
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0px;
@@ -8,16 +13,74 @@ body {
     transition-timing-function: cubic-bezier(.175,.885,.32,1.275);
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 header {
     width: 100%;
     display: block;
 }
 
+.header-home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin-top: 90px;
+}
+
+.header-home h1 {
+    font-size: 40px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.home1, .home2 {
+    border-radius: 2px;
+    outline: none;
+    border: 0;
+    margin: 0 5px;
+    margin-top: 20px;
+    border: 2px solid transparent;
+ 
+}
+
+.home1 {
+    background-color: #f8b195;
+    color:#c74d1d;
+}
+
+.home2 {
+    background-color: #a4d4ae;
+    color: #13952d;
+}
+
+.home1:hover {
+    background-color: white;
+    border: 2px solid #c74d1d;
+    color: #c74d1d;
+}
+
+.home2:hover {
+    background-color: white;
+    border: 2px solid #13952d;
+    color: #13952d;
+}
+
+.main-title {
+    font-size: 24px;
+}
+
 nav {
     display: flex;
+    background-color: white;
     justify-content: space-between;
     width: 100%;
-    margin-top: 20px;
+    position: fixed;
+    box-shadow: 1px 1px 10px 10px rgb(0,0,0, 0.1);
+    z-index: 900;
 }
 
 
@@ -49,27 +112,22 @@ nav {
   }
 
 .items li {
-    padding: 0px 10px ;
+    padding: 0px 20px ;
     cursor:pointer;
 }
 
-.myButton {
-    background-color: rgb(14, 91, 235);
-    border-radius: 6px;
-    cursor: pointer;
-    color:#ffffff;
-    font-size: 14px;
-    padding: 8px 24px;
-    text-decoration:none; 
-    line-height: 18px;
-    margin-right: 25px;
-    margin-top: 10px;
+button.myButton {
+    width: 100px;
+    height: 40px;
+    margin-right: 90px;
+
 }
 
 
 
 .middle-section {
     width: 80%;
+    margin-top: 50px; 
       
 }
 
@@ -87,7 +145,7 @@ nav {
     text-align: left;
 }
 
-.description h4{
+.description h4, .header-home h4 {
     font-weight: 500;
     color: gray;
     margin: 0;
@@ -95,7 +153,9 @@ nav {
     }
     
 
-
+.howdoesit {
+    height: 100vh;
+}
     
 .container-options{
     margin-top: 60px;
@@ -134,6 +194,7 @@ nav {
     justify-content: space-between;    
     width: 100%;
     margin-top: 100px;   
+    height: 100vh;
     
 }
 
@@ -160,6 +221,7 @@ nav {
 .digital-agency {
     display: flex;
     justify-content: space-around;
+    height: 100vh;
 }
 
 .DA-text{
@@ -180,12 +242,12 @@ nav {
     font-weight: 600;
 }
 
-.DA-text button {
+.DA-text button, .myButton {
     margin-top: 10px;
     border-radius: 5px;
     color: white;
     background-color: #698474;
-    width: 32%;
+    width: 150px;
     line-height: 35px;
     box-shadow: none;
     font-size: 15px;
@@ -210,7 +272,7 @@ nav {
     color: #fa697c;
 }
 
-.DA-text button:hover {
+.DA-text button:hover, .myButton:hover {
     background-color:white;
     border: 1.5px solid #698474;
     color: #698474;
@@ -250,8 +312,10 @@ nav {
 .case-studies-container {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     width: 80%;
+    height: 100vh;
     margin: 50px 0;
 }
 
@@ -363,8 +427,10 @@ nav {
     margin: 15px;
 }
 
-.case-button {
-    padding: 10px 18px;
+button.case-button {
+    padding: 0px;
+    width: 93px;
+    line-height: 32px;
     border-radius: 3px;
     border: none;
     margin: 20px;
@@ -399,8 +465,10 @@ MEDIA QUERY
 ---------------------------------------------------------------*/
 
 @media(max-width: 1000px) {
+
     .cards-case-studies-container {
         flex-wrap: wrap;
+        height: 100%;
     }
     .card-case-studies {
         width: 49%;
@@ -442,9 +510,10 @@ MEDIA QUERY
 
 .slider {
     width: 80%;
-    margin: 150px 0;
+    height: 100vh;
     text-align: center;
     position: relative;
+    margin-top: 80px;
 }
 
 .sldr-title {
@@ -581,7 +650,12 @@ MEDIA QUERY
         RESPONSIVE
 ========================*/
 
-@media (max-width: 990px) {
+@media (max-width: 1000px) {
+
+    .slider {
+        height: 100%;
+    }
+
     .sldr-button {
         bottom: 1090px;
     }

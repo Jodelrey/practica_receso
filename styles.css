@@ -82,8 +82,52 @@ nav {
     box-shadow: 1px 1px 10px 10px rgb(0,0,0, 0.1);
     z-index: 900;
 }
+.hidden-nav {
+    position: relative;
+    display: none;
+    
+}
+.nav-hidden-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    padding: 25px;
+    background-color: white;
+    position: absolute;
+    box-shadow: 1px 1px 10px 10px rgb(0,0,0, 0.1);
+    border-radius: 15px;
+    position: absolute;
+    right: -70px;
+    display: none;
+
+}
 
 
+.hidden-button .myButton {
+    margin: auto;
+}
+.nav-link.hidden-link {
+    padding: 10px 10px;
+    text-align: center;
+}
+.fas.fa-bars {
+    padding: 10px;
+}
+.fas.fa-bars:hover {
+    color: red;
+    transition: 0s;
+}
+.hidden-nav:hover .nav-hidden-list {
+    display: block;
+    top: 40px;
+}
+
+.hidden-nav:hover .hidden-link .myButton {
+    display: block;
+    
+}
 
 .imagelogosimple {
     display: flex;
@@ -94,6 +138,28 @@ nav {
 .itemsbarradenavegacion {
      width: 60%;
 }
+/*-----------------------------------------------------------------
+                        NAV MEDIA QUERY
+----------------------------------------------------------------*/
+
+@media(max-width:850px) {
+    nav {
+        justify-content: space-around;
+    }
+    .itemsbarradenavegacion {
+        width: 15%;
+    }
+    .nav-shown, .myButton {
+        display: none;
+    }
+    .hidden-nav {
+        display: flex;
+    }
+    
+}
+
+
+
 
 .items {
     list-style: none;
@@ -104,17 +170,21 @@ nav {
     width: 100%;
     padding-top: 10px;    
 }
+.hidden-nav:hover i.fas.fabars {
+    color: red;
+}
 
 
-.items li:hover {
+.nav-link {
+    padding: 0px 20px ;
+    cursor:pointer;
+}
+
+.nav-link:hover {
     color: red;
     font-weight: bold;
   }
 
-.items li {
-    padding: 0px 20px ;
-    cursor:pointer;
-}
 
 button.myButton {
     width: 100px;

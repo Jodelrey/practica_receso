@@ -809,7 +809,9 @@ MEDIA QUERY
 .contact-button {
     margin-top: 40px;
 }
-
+.contact-button button{
+    border:none;
+}
 button {
     width: 120px;
     line-height: 40px;
